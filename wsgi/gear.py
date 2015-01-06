@@ -337,7 +337,7 @@ class Gear(object):
         return outstring
     #@+node:2015.20141216095746.1754: *3* gear_weblink
     @cherrypy.expose
-    def gear_weblink(self, facewidth=5, n=18):
+    def cube_weblink(self):
         outstring = '''<script type="text/javascript" src="/static/pfcUtils.js"></script>
     <script type="text/javascript" src="/static/wl_header.js">
     document.writeln ("Error loading Pro/Web.Link header!");
@@ -406,7 +406,7 @@ class Gear(object):
             {
                 alert ("Exception occurred: "+pfcGetExceptionType (err));
             }
-    // ]]></script>
+    </script>
     '''
         return outstring
     #@-others
