@@ -338,11 +338,11 @@ class Gear(object):
     #@+node:2015.20141216095746.1754: *3* gear_weblink
     @cherrypy.expose
     def gear_weblink(self, facewidth=5, n=18):
-        outstring = '''<script type="text/javascript"src="/static/weblink/pfcUtils.js"></script>
-    <script type="text/javascript" src="/static/weblink/wl_header.js">// <![CDATA[
+        outstring = '''<script type="text/javascript" src="/static/pfcUtils.js"></script>
+    <script type="text/javascript" src="/static/wl_header.js">
     document.writeln ("Error loading Pro/Web.Link header!");
     // ]]></script>
-    <script type="text/javascript" language="JavaScript">// <![CDATA[
+    <script type="text/javascript" language="JavaScript">
     if (!pfcIsWindows()) netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
     // 若第三輸入為 false, 表示僅載入 session, 但是不顯示
     // ret 為 model open return
