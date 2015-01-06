@@ -341,9 +341,8 @@ class Gear(object):
         outstring = '''<script type="text/javascript" src="/static/pfcUtils.js"></script>
     <script type="text/javascript" src="/static/wl_header.js">
     document.writeln ("Error loading Pro/Web.Link header!");
-    // ]]></script>
+    </script>
     <script type="text/javascript" language="JavaScript">
-    if (!pfcIsWindows()) netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
     // 若第三輸入為 false, 表示僅載入 session, 但是不顯示
     // ret 為 model open return
      var ret = document.pwl.pwlMdlOpen("gear.prt", "v:/", false);
