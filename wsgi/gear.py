@@ -338,8 +338,9 @@ class Gear(object):
     #@+node:2015.20141216095746.1754: *3* gear_weblink
     @cherrypy.expose
     def gear_weblink(self, facewidth=5, n=18):
-        outstring = '''<script type="text/javascript" src="/static/pfcUtils.js"></script>
-    <script type="text/javascript" src="/static/wl_header.js">// <![CDATA[
+        outstring = '''<script type="text/weblink/examples/javascript" src="/static/pfcUtils.js"></script>
+    <script type="text/weblink
+    /examples/javascript" src="/static/wl_header.js">// <![CDATA[
     document.writeln ("Error loading Pro/Web.Link header!");
     // ]]></script>
     <script type="text/javascript" language="JavaScript">// <![CDATA[
