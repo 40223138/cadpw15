@@ -343,7 +343,6 @@ class Gear(object):
     document.writeln ("Error loading Pro/Web.Link header!");
     // ]]></script>
     <script type="text/javascript" language="JavaScript">// <![CDATA[
-    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
     // 若第三輸入為 false, 表示僅載入 session, 但是不顯示
     // ret 為 model open return
      var ret = document.pwl.pwlMdlOpen("gear.prt", "v:/", false);
