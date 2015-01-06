@@ -337,12 +337,13 @@ class Gear(object):
         return outstring
     #@+node:2015.20141216095746.1754: *3* gear_weblink
     @cherrypy.expose
-    def cube_weblink(self):
+    def gear_weblink(self, facewidth=5, n=18):
         outstring = '''<script type="text/javascript" src="/static/pfcUtils.js"></script>
-    <script type="text/javascript" src="/static/wl_header.js">
+    <script type="text/javascript" src="/static/wl_header.js">// <![CDATA[
     document.writeln ("Error loading Pro/Web.Link header!");
-    </script>
-    <script type="text/javascript" language="JavaScript">
+    // ]]></script>
+    <script type="text/javascript" language="JavaScript">// <![CDATA[
+    if (!pfcIsWindows()) netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
     // 若第三輸入為 false, 表示僅載入 session, 但是不顯示
     // ret 為 model open return
      var ret = document.pwl.pwlMdlOpen("gear.prt", "v:/", false);
@@ -406,7 +407,7 @@ class Gear(object):
             {
                 alert ("Exception occurred: "+pfcGetExceptionType (err));
             }
-    </script>
+    // ]]></script>
     '''
         return outstring
     #@-others
